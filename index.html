@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fichário: política de privacidade</title>
+<style>
+  :root { color-scheme: light dark; --fg: #1c1b1f; --bg: #ffffff; --muted: #5f5d66; --accent: #4f46e5; }
+  @media (prefers-color-scheme: dark) { :root { --fg: #e6e1e5; --bg: #121116; --muted: #aaa6b0; --accent: #a5b4fc; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { color: var(--accent); line-height: 1.25; }
+  h2 { margin-top: 2em; font-size: 1.15em; }
+  hr { margin: 3em 0; border: 0; border-top: 1px solid var(--muted); }
+  code { font-family: ui-monospace, monospace; }
+  nav { color: var(--muted); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+<!-- Mesmo texto de docs/privacy-policy.md: mude os dois juntos. Sem scripts nem recursos externos. -->
+<nav><a href="#en">English version below</a></nav>
+<h1>Política de privacidade do Fichário</h1>
+<p>Última atualização: 24 de outubro de 2026</p>
+<p>O Fichário é um app para organizar uma coleção de cartas colecionáveis e ver uma referência de preço em reais. Ele foi feito para não coletar dados pessoais. Esta página explica o que o app acessa e por quê.</p>
+<h2>Resumo</h2>
+<ul>
+<li>Não há conta, login nem cadastro.
+<li>Não há analytics do desenvolvedor, rastreamento, publicidade nem SDK de anúncios.
+<li>O desenvolvedor não recebe, não vende e não compartilha nenhum dado seu. A única coleta automática é a de diagnóstico do ML Kit do Google, explicada abaixo, sem dados pessoais nem imagens.
+<li>O que você registra (coleções, quantidades, condição, preços que você digita) fica no seu aparelho.
+</ul>
+<h2>Câmera</h2>
+<p>A permissão de câmera serve só para o scanner ler a carta que você aponta. O reconhecimento de texto (OCR) roda no próprio aparelho, com o ML Kit do Google em modo local. As imagens da câmera não são gravadas nem enviadas para lugar nenhum. Se você negar a permissão, o resto do app funciona, e o scanner ainda aceita uma foto escolhida na galeria pelo seletor de fotos do Android, também lida só no aparelho.</p>
+<p>O ML Kit envia ao Google dados de diagnóstico e uso da própria biblioteca: modelo e versão do Android do aparelho, nome e versão do app, um identificador por instalação (que não identifica você nem o aparelho), tempo de processamento, configuração da leitura (formato e resolução da imagem) e códigos de erro. Isso vai criptografado (HTTPS), o Google não repassa a terceiros e usa só para diagnóstico e estatística de uso do ML Kit. Nem a imagem nem o texto lido vão junto. Detalhes: <a href="https://developers.google.com/ml-kit/android-data-disclosure">https://developers.google.com/ml-kit/android-data-disclosure</a></p>
+<h2>Internet</h2>
+<p>O app usa a internet para dois serviços públicos:</p>
+<ul>
+<li><strong>TCGdex</strong> (api.tcgdex.net): lista de expansões, dados e imagens das cartas e preços de referência internacionais (TCGplayer e Cardmarket).
+<li><strong>Banco Central do Brasil</strong> (olinda.bcb.gov.br): cotação do dólar e do euro (PTAX) para converter o preço em reais.
+</ul>
+<p>Essas consultas pedem só dados de cartas e de câmbio. Não levam nome, e-mail, identificador de anúncio nem nada da sua coleção. Como em qualquer acesso à internet, esses serviços recebem o endereço IP do aparelho e a versão do app (no cabeçalho User-Agent); o uso que fazem disso segue as políticas deles.</p>
+<h2>Dados guardados no aparelho</h2>
+<p>O app guarda localmente: o banco de cartas baixado do TCGdex, o histórico de preços e câmbio, suas coleções e os preços da Liga Pokémon ou da MYP Cards que você mesmo digita. O app não lê, não baixa e não raspa esses sites; o preço nacional é sempre informado por você.</p>
+<p>Para desinstalar tudo, basta desinstalar o app ou limpar os dados dele nas configurações do Android.</p>
+<h2>Backup</h2>
+<p>Se o Backup do Google estiver ligado no seu aparelho, o Android pode incluir o banco do app no Auto Backup, que fica na sua conta Google e é controlado pelo Google, não pelo desenvolvedor. O cache de imagens fica de fora. Você pode desligar o backup nas configurações do Android.</p>
+<h2>Exportar CSV</h2>
+<p>Quando você exporta uma coleção em CSV, o arquivo vai para o lugar que você escolher no "Salvar como" do Android. O app não envia o arquivo para ninguém.</p>
+<h2>Links para outros sites</h2>
+<p>Os botões da Liga Pokémon e da MYP Cards abrem esses sites no navegador. O app pode copiar o nome da carta para a área de transferência para facilitar a busca. A partir daí, você está no site de terceiros, com a política de privacidade dele.</p>
+<h2>Crianças</h2>
+<p>O app não é direcionado a crianças e não coleta dados de ninguém, de nenhuma idade.</p>
+<h2>Mudanças</h2>
+<p>Se esta política mudar, a nova versão será publicada neste mesmo endereço, com a data atualizada no topo.</p>
+<h2>Contato</h2>
+<p>Dúvidas sobre privacidade: <a href="https://github.com/veronezzi/fichario-privacy/issues">github.com/veronezzi/fichario-privacy/issues</a></p>
+<h2>Aviso</h2>
+<p>App não oficial. Não é afiliado nem endossado por Nintendo, The Pokémon Company, Creatures, GAME FREAK, TCGplayer, Cardmarket, MYP Cards ou Liga Pokémon.</p>
+<hr id="en">
+<div lang="en">
+<h1>Fichário privacy policy</h1>
+<p>Last updated: October 24, 2026</p>
+<p>Fichário is an app for organizing a trading card collection and showing a reference price in Brazilian reais. It is designed not to collect personal data. This page explains what the app accesses and why.</p>
+<h2>Summary</h2>
+<ul>
+<li>No account, login or sign-up.
+<li>No developer analytics, tracking, advertising or ad SDKs.
+<li>The developer does not receive, sell or share any of your data. The only automatic collection is Google ML Kit's diagnostics, explained below, with no personal data or images.
+<li>What you record (collections, quantities, condition, prices you type) stays on your device.
+</ul>
+<h2>Camera</h2>
+<p>The camera permission is used only so the scanner can read the card you point at. Text recognition (OCR) runs on the device, using Google's ML Kit in on-device mode. Camera images are not saved or sent anywhere. If you deny the permission, the rest of the app works, and the scanner still accepts a photo picked with the Android photo picker, which is also read only on the device.</p>
+<p>ML Kit sends Google diagnostic and usage data about the library itself: device model and Android version, app package name and version, a per-installation identifier (which does not identify you or the device), processing time, recognition settings (image format and resolution) and error codes. It is encrypted in transit (HTTPS), Google does not share it with third parties and uses it only for ML Kit diagnostics and usage statistics. Neither the image nor the recognized text is included. Details: <a href="https://developers.google.com/ml-kit/android-data-disclosure">https://developers.google.com/ml-kit/android-data-disclosure</a></p>
+<h2>Internet</h2>
+<p>The app uses the internet for two public services:</p>
+<ul>
+<li><strong>TCGdex</strong> (api.tcgdex.net): set list, card data and images, and international reference prices (TCGplayer and Cardmarket).
+<li><strong>Central Bank of Brazil</strong> (olinda.bcb.gov.br): USD and EUR exchange rates (PTAX) to convert prices to reais.
+</ul>
+<p>These requests ask only for card and exchange rate data. They carry no name, email, advertising ID or anything about your collection. As with any internet access, these services see the device's IP address and the app version (in the User-Agent header); how they handle it is governed by their own policies.</p>
+<h2>Data stored on the device</h2>
+<p>The app stores locally: the card database downloaded from TCGdex, the price and exchange rate history, your collections, and the Liga Pokémon or MYP Cards prices you type yourself. The app does not read, download or scrape those sites; the Brazilian price is always entered by you.</p>
+<p>To remove everything, uninstall the app or clear its data in Android settings.</p>
+<h2>Backup</h2>
+<p>If Google Backup is turned on for your device, Android may include the app's database in Auto Backup, which is stored in your Google account and controlled by Google, not by the developer. The image cache is excluded. You can turn backup off in Android settings.</p>
+<h2>CSV export</h2>
+<p>When you export a collection as CSV, the file goes wherever you choose in Android's "Save as" dialog. The app does not send the file to anyone.</p>
+<h2>Links to other sites</h2>
+<p>The Liga Pokémon and MYP Cards buttons open those sites in your browser. The app may copy the card name to the clipboard to make searching easier. From there on you are on a third-party site, under its privacy policy.</p>
+<h2>Children</h2>
+<p>The app is not directed at children and does not collect data from anyone, of any age.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be published at this same address, with the date at the top updated.</p>
+<h2>Contact</h2>
+<p>Privacy questions: <a href="https://github.com/veronezzi/fichario-privacy/issues">github.com/veronezzi/fichario-privacy/issues</a></p>
+<h2>Notice</h2>
+<p>Unofficial app. Not affiliated with or endorsed by Nintendo, The Pokémon Company, Creatures, GAME FREAK, TCGplayer, Cardmarket, MYP Cards or Liga Pokémon.</p>
+</div>
+</main>
+</body>
+</html>
